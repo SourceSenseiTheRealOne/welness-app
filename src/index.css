@@ -1,3 +1,222 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Custom font families */
+.font-serif {
+  font-family: 'Crimson Text', serif;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Sacred geometry patterns */
+.mandala-pattern {
+  background-image: radial-gradient(circle at center, 
+    transparent 20%, 
+    rgba(255, 215, 0, 0.1) 21%, 
+    rgba(255, 215, 0, 0.1) 22%, 
+    transparent 23%
+  );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #fbbf24, #f59e0b);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #f59e0b, #d97706);
+}
+
+/* Breathing circle animation */
+@keyframes breathe-in {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.2); }
+}
+
+@keyframes breathe-out {
+  0% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.breathe-in {
+  animation: breathe-in 4s ease-in-out;
+}
+
+.breathe-out {
+  animation: breathe-out 6s ease-in-out;
+}
+
+/* Glowing effect for solar elements */
+.solar-glow {
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));
+}
+
+/* Gradient text effects */
+.gradient-text-solar {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Sacred container styling */
+.sacred-container {
+  background: linear-gradient(135deg, 
+    rgba(255, 251, 235, 0.8) 0%, 
+    rgba(254, 243, 199, 0.6) 50%, 
+    rgba(253, 230, 138, 0.4) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Avatar glow effect */
+.avatar-glow {
+  box-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.3),
+    0 0 40px rgba(255, 140, 0, 0.2),
+    0 0 60px rgba(255, 69, 0, 0.1);
+}
+
+/* Cosmic background particles */
+.cosmic-particles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, rgba(255, 215, 0, 0.3), transparent),
+    radial-gradient(1px 1px at 40px 70px, rgba(255, 140, 0, 0.2), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 215, 0, 0.3), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255, 140, 0, 0.2), transparent);
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  animation: float 20s linear infinite;
+  pointer-events: none;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .mobile-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .mobile-text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .bg-white\/60 {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .text-amber-600 {
+    color: #92400e;
+  }
+  
+  .text-amber-700 {
+    color: #78350f;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow,
+  .animate-pulse,
+  .animate-ping,
+  .animate-float {
+    animation: none;
+  }
+  
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible for accessibility */
+.focus-visible:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Custom button hover effects */
+.btn-solar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+
+/* Sacred typography */
+.sacred-heading {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-shadow: 0 2px 4px rgba(255, 215, 0, 0.1);
+}
+
+.sacred-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #92400e;
+}
