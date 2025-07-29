@@ -262,8 +262,8 @@ const MealGuide: React.FC<MealGuideProps> = ({ timeOfDay }) => {
 
           {/* Action Button */}
           <div className="text-center mt-8">
-            <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-yellow-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300">
-              Begin Cooking Ritual
+            <button className="w-full bg-gradient-to-r from-yellow-600 to-orange-600 text-white py-2 px-4 rounded-lg hover:from-yellow-500 hover:to-orange-500 transition-all duration-300 font-medium">
+              Begin Aligned Cooking
             </button>
           </div>
         </div>

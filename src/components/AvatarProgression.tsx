@@ -10,7 +10,7 @@ const AvatarProgression: React.FC = () => {
   const avatarStages = [
     { level: 1, name: 'Solar Spark', description: 'A tiny spark of solar consciousness awakens', icon: '✨', color: 'from-yellow-200 to-yellow-300' },
     { level: 2, name: 'Dawn Seeker', description: 'Beginning to align with solar rhythms', icon: '🌅', color: 'from-orange-200 to-yellow-300' },
-    { level: 3, name: 'Light Bearer', description: 'Carrying the flame of awareness', icon: '🕯️', color: 'from-yellow-300 to-orange-400' },
+    { name: 'Zenith Conqueror', level: 3, description: 'Mastering solar alignment', color: 'from-red-400 to-purple-400' },
     { level: 4, name: 'Solar Student', description: 'Learning the sacred ways of sun wisdom', icon: '📿', color: 'from-orange-300 to-red-400' },
     { level: 5, name: 'Radiant Seeker', description: 'Seeking deeper connection with cosmic energy', icon: '🔮', color: 'from-yellow-400 to-orange-500' },
     { level: 6, name: 'Solar Practitioner', description: 'Established in daily solar practices', icon: '🧘', color: 'from-orange-400 to-red-500' },

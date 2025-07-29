@@ -164,7 +164,7 @@ const SolarDashboard: React.FC<SolarDashboardProps> = ({ timeOfDay }) => {
         {[
           { icon: Sun, label: 'Solar Breathwork', color: 'yellow' },
           { icon: Zap, label: 'Movement Flow', color: 'orange' },
-          { icon: Moon, label: 'Rest Ritual', color: 'indigo' },
+          { icon: Moon, label: 'Enter Rest Mode', color: 'indigo' },
           { icon: Sparkles, label: 'Avatar Progress', color: 'purple' }
         ].map(({ icon: Icon, label, color }) => (
           <button key={label} className={`bg-white/60 backdrop-blur-sm rounded-2xl p-4 border border-yellow-200/50 hover:shadow-lg transition-all duration-300 group`}>
