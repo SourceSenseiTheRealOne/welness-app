@@ -164,14 +164,14 @@ const SolarDashboard: React.FC<SolarDashboardProps> = ({ timeOfDay }) => {
         {[
           { icon: Sun, label: 'Solar Breathwork', color: 'yellow' },
           { icon: Zap, label: 'Movement Flow', color: 'orange' },
-          { icon: Moon, label: 'Enter Rest Mode', color: 'indigo' },
+          { icon: Moon, label: 'Enter Rest Mode', color: 'purple' },
           { icon: Sparkles, label: 'Avatar Progress', color: 'purple' }
         ].map(({ icon: Icon, label, color }) => (
-          <button key={label} className={`bg-white/60 backdrop-blur-sm rounded-2xl p-4 border border-yellow-200/50 hover:shadow-lg transition-all duration-300 group`}>
-            <div className={`w-12 h-12 bg-gradient-to-br from-${color}-400 to-${color}-500 rounded-full flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition-transform duration-300`}>
-              <Icon className="w-6 h-6 text-white" />
+          <button key={label} className={`sacred-container rounded-2xl p-4 border-2 border-yellow-300 hover:incandescent-glow transition-all duration-300 group btn-solar`}>
+            <div className={`w-12 h-12 divine-gold-bg rounded-full flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition-transform duration-300 incandescent-glow`}>
+              <Icon className="w-6 h-6 text-white solar-glow" />
             </div>
-            <p className="text-sm font-semibold text-amber-800 text-center">{label}</p>
+            <p className="text-sm font-semibold text-white text-center sacred-heading">{label}</p>
           </button>
         ))}
       </div>

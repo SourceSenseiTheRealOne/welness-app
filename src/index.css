@@ -4,6 +4,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* COMMANDING GOLDEN MAJESTY COLOR PALETTE */
+:root {
+  --royal-solar-gold: #FFD700;
+  --auric-inferno: #FFB300;
+  --deep-saffron: #F4C430;
+  --blazing-white-gold: #FFF8DC;
+  --cosmic-shadow: #2A1A0F;
+  --embers-of-divinity: #FF5E00;
+}
+
 /* Custom font families */
 .font-serif {
   font-family: 'Crimson Text', serif;
@@ -34,10 +44,31 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 30px var(--royal-solar-gold), 0 0 60px var(--auric-inferno);
   }
   50% {
-    box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
+    box-shadow: 0 0 50px var(--royal-solar-gold), 0 0 100px var(--auric-inferno);
+  }
+}
+
+@keyframes golden-radiance {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--royal-solar-gold), 0 0 40px var(--auric-inferno), 0 0 60px var(--embers-of-divinity);
+  }
+  50% {
+    box-shadow: 0 0 40px var(--royal-solar-gold), 0 0 80px var(--auric-inferno), 0 0 120px var(--embers-of-divinity);
+  }
+}
+
+@keyframes solar-ascent {
+  0% {
+    background: linear-gradient(180deg, var(--cosmic-shadow) 0%, var(--embers-of-divinity) 20%, var(--auric-inferno) 50%, var(--deep-saffron) 75%, var(--blazing-white-gold) 100%);
+  }
+  50% {
+    background: linear-gradient(180deg, var(--cosmic-shadow) 0%, var(--auric-inferno) 30%, var(--royal-solar-gold) 60%, var(--deep-saffron) 80%, var(--blazing-white-gold) 100%);
+  }
+  100% {
+    background: linear-gradient(180deg, var(--cosmic-shadow) 0%, var(--embers-of-divinity) 20%, var(--auric-inferno) 50%, var(--deep-saffron) 75%, var(--blazing-white-gold) 100%);
   }
 }
 
@@ -53,12 +84,20 @@
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
+.animate-golden-radiance {
+  animation: golden-radiance 3s ease-in-out infinite;
+}
+
+.animate-solar-ascent {
+  animation: solar-ascent 8s ease-in-out infinite;
+}
+
 /* Sacred geometry patterns */
 .mandala-pattern {
   background-image: radial-gradient(circle at center, 
     transparent 20%, 
-    rgba(255, 215, 0, 0.1) 21%, 
-    rgba(255, 215, 0, 0.1) 22%, 
+    rgba(255, 215, 0, 0.3) 21%, 
+    rgba(255, 179, 0, 0.2) 22%, 
     transparent 23%
   );
 }
@@ -69,17 +108,19 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 215, 0, 0.1);
+  background: var(--blazing-white-gold);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #fbbf24, #f59e0b);
+  background: linear-gradient(to bottom, var(--royal-solar-gold), var(--auric-inferno));
   border-radius: 4px;
+  box-shadow: 0 0 10px var(--royal-solar-gold);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #f59e0b, #d97706);
+  background: linear-gradient(to bottom, var(--auric-inferno), var(--embers-of-divinity));
+  box-shadow: 0 0 15px var(--royal-solar-gold);
 }
 
 /* Breathing circle animation */
@@ -103,34 +144,36 @@
 
 /* Glowing effect for solar elements */
 .solar-glow {
-  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));
+  filter: drop-shadow(0 0 20px var(--royal-solar-gold)) drop-shadow(0 0 40px var(--auric-inferno));
 }
 
 /* Gradient text effects */
 .gradient-text-solar {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+  background: linear-gradient(135deg, var(--royal-solar-gold), var(--auric-inferno), var(--embers-of-divinity));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: 0 0 30px var(--royal-solar-gold);
 }
 
 /* Sacred container styling */
 .sacred-container {
   background: linear-gradient(135deg, 
-    rgba(255, 251, 235, 0.8) 0%, 
-    rgba(254, 243, 199, 0.6) 50%, 
-    rgba(253, 230, 138, 0.4) 100%
+    rgba(255, 248, 220, 0.9) 0%, 
+    rgba(244, 196, 48, 0.7) 50%, 
+    rgba(255, 179, 0, 0.5) 100%
   );
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 215, 0, 0.3);
+  border: 2px solid var(--royal-solar-gold);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
 }
 
 /* Avatar glow effect */
 .avatar-glow {
   box-shadow: 
-    0 0 20px rgba(255, 215, 0, 0.3),
-    0 0 40px rgba(255, 140, 0, 0.2),
-    0 0 60px rgba(255, 69, 0, 0.1);
+    0 0 30px var(--royal-solar-gold),
+    0 0 60px var(--auric-inferno),
+    0 0 90px var(--embers-of-divinity);
 }
 
 /* Cosmic background particles */
@@ -142,10 +185,10 @@
   right: 0;
   bottom: 0;
   background-image: 
-    radial-gradient(1px 1px at 20px 30px, rgba(255, 215, 0, 0.3), transparent),
-    radial-gradient(1px 1px at 40px 70px, rgba(255, 140, 0, 0.2), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(255, 215, 0, 0.3), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(255, 140, 0, 0.2), transparent);
+    radial-gradient(2px 2px at 20px 30px, var(--royal-solar-gold), transparent),
+    radial-gradient(2px 2px at 40px 70px, var(--auric-inferno), transparent),
+    radial-gradient(2px 2px at 90px 40px, var(--deep-saffron), transparent),
+    radial-gradient(2px 2px at 130px 80px, var(--embers-of-divinity), transparent);
   background-repeat: repeat;
   background-size: 150px 150px;
   animation: float 20s linear infinite;
@@ -171,12 +214,12 @@
     background-color: rgba(255, 255, 255, 0.9);
   }
   
-  .text-amber-600 {
-    color: #92400e;
+  .text-golden-600 {
+    color: var(--auric-inferno);
   }
   
-  .text-amber-700 {
-    color: #78350f;
+  .text-golden-700 {
+    color: var(--embers-of-divinity);
   }
 }
 
@@ -185,7 +228,9 @@
   .animate-spin-slow,
   .animate-pulse,
   .animate-ping,
-  .animate-float {
+  .animate-float,
+  .animate-golden-radiance,
+  .animate-solar-ascent {
     animation: none;
   }
   
@@ -196,14 +241,15 @@
 
 /* Focus visible for accessibility */
 .focus-visible:focus {
-  outline: 2px solid #fbbf24;
+  outline: 3px solid var(--royal-solar-gold);
   outline-offset: 2px;
+  box-shadow: 0 0 20px var(--royal-solar-gold);
 }
 
 /* Custom button hover effects */
 .btn-solar:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 15px 35px var(--royal-solar-gold), 0 5px 15px var(--auric-inferno);
 }
 
 /* Sacred typography */
@@ -211,12 +257,33 @@
   font-family: 'Crimson Text', serif;
   font-weight: 600;
   letter-spacing: 0.025em;
-  text-shadow: 0 2px 4px rgba(255, 215, 0, 0.1);
+  text-shadow: 0 0 20px var(--royal-solar-gold), 0 0 40px var(--auric-inferno);
 }
 
 .sacred-body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  color: #92400e;
+  color: var(--cosmic-shadow);
+}
+
+/* Divine Golden Elements */
+.divine-gold-bg {
+  background: linear-gradient(135deg, var(--royal-solar-gold) 0%, var(--auric-inferno) 50%, var(--deep-saffron) 100%);
+}
+
+.incandescent-glow {
+  box-shadow: 
+    0 0 20px var(--royal-solar-gold),
+    0 0 40px var(--auric-inferno),
+    0 0 60px var(--embers-of-divinity),
+    inset 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.solar-majesty-text {
+  background: linear-gradient(45deg, var(--royal-solar-gold), var(--blazing-white-gold), var(--auric-inferno));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px var(--royal-solar-gold));
 }

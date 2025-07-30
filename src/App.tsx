@@ -51,15 +51,16 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 transition-all duration-1000">
+    <div className="min-h-screen transition-all duration-1000 animate-solar-ascent">
       {/* Cosmic Background Animation */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 via-orange-400/10 to-amber-400/5 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-orange-400/30 to-amber-400/20 animate-golden-radiance"></div>
         {[...Array(12)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 bg-yellow-400/20 rounded-full animate-pulse"
+            className="absolute w-3 h-3 rounded-full animate-golden-radiance"
             style={{
+              background: `radial-gradient(circle, var(--royal-solar-gold), var(--auric-inferno))`,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animationDelay: `${i * 0.5}s`,
@@ -80,24 +81,24 @@ function App() {
       {/* Mobile Layout */}
       <div className="lg:hidden">
         {/* Mobile Header */}
-        <header className="bg-gradient-to-r from-amber-100 to-orange-100 border-b border-yellow-200/50 backdrop-blur-md sticky top-0 z-40">
+        <header className="divine-gold-bg border-b-2 border-yellow-300 backdrop-blur-md sticky top-0 z-40 incandescent-glow">
           <div className="flex items-center justify-between p-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
-                <Sun className="w-6 h-6 text-white animate-spin-slow" />
+              <div className="w-10 h-10 divine-gold-bg rounded-full flex items-center justify-center incandescent-glow">
+                <Sun className="w-6 h-6 text-white animate-spin-slow solar-glow" />
               </div>
               <div>
-                <h1 className="text-xl font-serif font-bold bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">
+                <h1 className="text-xl font-serif font-bold solar-majesty-text">
                   SuryaWell
                 </h1>
-                <p className="text-xs text-amber-600">Solar Wellness Temple</p>
+                <p className="text-xs text-white font-semibold">Solar Wellness Temple</p>
               </div>
             </div>
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 bg-white/50 rounded-lg backdrop-blur-sm border border-yellow-200/50 hover:bg-white/70 transition-all duration-300"
+              className="p-2 bg-white/30 rounded-lg backdrop-blur-sm border-2 border-yellow-300 hover:incandescent-glow transition-all duration-300"
             >
-              <Menu className="w-6 h-6 text-amber-700" />
+              <Menu className="w-6 h-6 text-white" />
             </button>
           </div>
         </header>
@@ -108,7 +109,7 @@ function App() {
         </div>
 
         {/* Mobile Bottom Navigation */}
-        <nav className="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-yellow-200/50 z-30">
+        <nav className="fixed bottom-0 left-0 right-0 divine-gold-bg backdrop-blur-md border-t-2 border-yellow-300 z-30 incandescent-glow">
           <div className="flex items-center justify-around py-2 px-4">
             {[
               { id: 'dashboard', icon: Sun, label: 'Solar' },
@@ -119,13 +120,13 @@ function App() {
               <button
                 key={id}
                 onClick={() => setActiveView(id)}
-                className={`flex flex-col items-center space-y-1 p-2 rounded-lg transition-all duration-300 ${
+                className={`flex flex-col items-center space-y-1 p-2 rounded-lg transition-all duration-300 btn-solar ${
                   activeView === id
-                    ? 'bg-gradient-to-b from-yellow-100 to-orange-100 text-amber-700 shadow-md'
-                    : 'text-amber-600 hover:text-amber-700 hover:bg-yellow-50'
+                    ? 'bg-white/30 text-white shadow-lg incandescent-glow'
+                    : 'text-white/80 hover:text-white hover:bg-white/20'
                 }`}
               >
-                <Icon className="w-5 h-5" />
+                <Icon className="w-5 h-5 solar-glow" />
                 <span className="text-xs font-medium">{label}</span>
               </button>
             ))}
