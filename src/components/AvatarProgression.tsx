@@ -15,7 +15,7 @@ const AvatarProgression: React.FC = () => {
     { level: 5, name: 'Radiant Seeker', description: 'Seeking deeper connection with cosmic energy', icon: '🔮', color: 'from-yellow-400 to-orange-500' },
     { level: 6, name: 'Solar Practitioner', description: 'Established in daily solar practices', icon: '🧘', color: 'from-orange-400 to-red-500' },
     { level: 7, name: 'Luminous Being', description: 'Radiating inner light and wisdom', icon: '👤', color: 'from-yellow-500 to-orange-600' },
-    { level: 8, name: 'Solar Warrior', description: 'Strong in purpose and solar alignment', icon: '🗡️', color: 'from-orange-500 to-red-600' },
+    { level: 8, name: 'Solar Conqueror', description: 'Strong in purpose and solar alignment', icon: '🗡️', color: 'from-orange-500 to-red-600' },
     { level: 9, name: 'Light Guardian', description: 'Protecting and sharing sacred knowledge', icon: '🛡️', color: 'from-yellow-600 to-orange-700' },
     { level: 10, name: 'Solar Sage', description: 'Wise teacher of solar mysteries', icon: '👨‍🏫', color: 'from-orange-600 to-red-700' },
     { level: 11, name: 'Cosmic Healer', description: 'Channeling healing solar energies', icon: '💫', color: 'from-yellow-700 to-orange-800' },
@@ -28,7 +28,7 @@ const AvatarProgression: React.FC = () => {
     { name: 'Solar Aligned', description: 'Maintained 90%+ alignment for 30 days', icon: '⚡', unlocked: true, date: '2 weeks ago' },
     { name: 'Movement Flow', description: 'Practiced daily movement for 21 days', icon: '🤸', unlocked: false, progress: 18 },
     { name: 'Meal Harmony', description: 'Followed sun-sync meals for 14 days', icon: '🍽️', unlocked: false, progress: 9 },
-    { name: 'Zenith Warrior', description: 'Peak energy sessions during solar zenith', icon: '⚔️', unlocked: false, progress: 12 }
+    { name: 'Zenith Conqueror', description: 'Peak energy sessions during solar zenith', icon: '⚔️', unlocked: false, progress: 12 }
   ];
 
   const weeklyProgress = [
@@ -66,6 +66,7 @@ const AvatarProgression: React.FC = () => {
             <Sparkles className="w-6 h-6 text-purple-500 animate-pulse" />
           </div>
           <p className="text-lg text-amber-700">Your evolving solar essence and spiritual progression</p>
+          <p className="text-lg text-amber-700">Your evolving solar essence and elevated path</p>
         </div>
 
         {/* Avatar Display */}
